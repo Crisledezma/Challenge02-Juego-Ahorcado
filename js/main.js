@@ -126,12 +126,9 @@ fetch(`${url}`)
         pierna1.classList.add('esconder');
         pierna2.classList.add('esconder');
 
-        //Aqui se dibuja la horca
-
         dibujarPalabra();
         document.addEventListener('keydown',eventoLetra);
-        document.addEventListener('click',eventoLetra);
-
+        document.addEventListener('load',eventoLetra);
     };
 jugar();
 btnJugar.addEventListener('click',resetear);
