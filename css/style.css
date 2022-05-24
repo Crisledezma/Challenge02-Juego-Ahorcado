@@ -135,6 +135,7 @@ body{
     min-width: 12px;
 }
 ul li{
+    cursor: pointer;
     width: 40px;
     margin: 5px;
     text-align: center;

@@ -11,6 +11,7 @@ fetch(`${url}`)
     const btnJugar = document.getElementById('btnJugar');
     const contenedorLetras = document.getElementById('letrasUsadas');
     const mensaje = document.getElementById('mensaje-final');
+    const teclas = document.querySelectorAll('li');
 
     const cabeza = document.getElementById('cabeza');
     const tronco = document.getElementById('tronco');
@@ -108,6 +109,13 @@ fetch(`${url}`)
             ingresarLetra(nuevaLetra);
         }
     };
+
+    for (i=0;i<teclas.length;i++){
+        let teclaActual = teclas[i].innerHTML;
+        teclas[i].addEventListener('click',function(){
+            ingresarLetra(teclaActual);
+        })
+    }
 
     const resetear = function(){
         location.reload();
