@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+  <title>Juego de Ahorcado</title>
+</head>
+
+<body class="body-juego">
+  <div class="western-container position-relative">
+    <div class="contenedor-fondo">
+      <h1 class="titulo text-center pt-2">Juego del Ahorcado</h1>
+      <!-- <img class="img-fondo" src="./img/western-bg.webp" alt="" srcset=""> -->
+      <img class="horca" src="./img/horca.png" alt="" srcset="">
+      <img src="./img/cabeza.png" alt="" class="cabeza" id="cabeza">
+      <img src="./img/tronco.png" alt="" class="tronco" id="tronco">
+      <img src="./img/brazo1.png" alt="" class="brazo1" id="brazo1">
+      <img src="./img/brazo2.png" alt="" class="brazo2" id="brazo2">
+      <img src="./img/pierna1.png" alt="" class="pierna1" id="pierna1">
+      <img src="./img/pierna2.png" alt="" class="pierna2" id="pierna2">
+    </div>
+    <div id="letrasUsadas" class="titulo-rojo fs-4 text-center"></div>
+    <div id="contenedorPalabra" class="text-center titulo fs-4"></div>
+    <div class="text-center">
+      <button id="btnJugar" type="button" class="btn mt-4">Jugar de Nuevo</button>
+    </div>
+    
+  </div>
+
+  <script src="./js/main.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
