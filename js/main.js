@@ -129,8 +129,8 @@ fetch(`${url}`)
         //Aqui se dibuja la horca
 
         dibujarPalabra();
-        window.prompt();
         document.addEventListener('keydown',eventoLetra);
+        document.addEventListener('click',eventoLetra);
 
     };
 jugar();
