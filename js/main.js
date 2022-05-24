@@ -5,7 +5,7 @@ fetch(`${url}`)
 .then( data => {
     const palabra = data[0].toUpperCase();
     let palabraPartida = palabra.split('');
-    console.log(palabraPartida);
+    console.log(palabra);
 
     const contenedorPalabra = document.getElementById('contenedorPalabra');
     const btnJugar = document.getElementById('btnJugar');
@@ -113,7 +113,9 @@ fetch(`${url}`)
     for (i=0;i<teclas.length;i++){
         let teclaActual = teclas[i].innerHTML;
         teclas[i].addEventListener('click',function(){
-            ingresarLetra(teclaActual);
+            if(!letrasUsadas.includes(teclaActual)){
+                ingresarLetra(teclaActual);
+            }
         })
     }
 
