@@ -10,6 +10,7 @@ fetch(`${url}`)
     const contenedorPalabra = document.getElementById('contenedorPalabra');
     const btnJugar = document.getElementById('btnJugar');
     const contenedorLetras = document.getElementById('letrasUsadas');
+    const mensaje = document.getElementById('mensaje-final');
 
     const cabeza = document.getElementById('cabeza');
     const tronco = document.getElementById('tronco');
@@ -55,6 +56,8 @@ fetch(`${url}`)
         }
         if(aciertos === palabraPartida.length){
             terminarJuego();
+            mensaje.innerHTML = 'FELICIDADES!! GANASTE!!'
+
         }
     };
 
@@ -69,6 +72,7 @@ fetch(`${url}`)
         errores++;
         if(errores === partes.length){
             terminarJuego();
+            mensaje.innerHTML = 'LO SIENTO, PERDISTE!'
         }
     };
 
@@ -95,12 +99,11 @@ fetch(`${url}`)
             letraIncorrecta();
         }
         agregarLetra(letra);
-        letrasUsadas.push(letra); console.log(letrasUsadas);
+        letrasUsadas.push(letra);
     };
 
-
     const eventoLetra = function(e){
-        let nuevaLetra = e.key.toUpperCase();console.log(nuevaLetra);
+        let nuevaLetra = e.key.toUpperCase();
         if(nuevaLetra.match(/^[a-zñ]$/i) && !letrasUsadas.includes(nuevaLetra)){
             ingresarLetra(nuevaLetra);
         }
@@ -118,6 +121,7 @@ fetch(`${url}`)
         contenedorPalabra.innerHTML = '';
         contenedorLetras.innerHTML = '';
         btnJugar.style.display = 'none';
+        mensaje.innerHTML = '';
 
         cabeza.classList.add('esconder');
         tronco.classList.add('esconder');
@@ -130,6 +134,7 @@ fetch(`${url}`)
         document.addEventListener('keydown',eventoLetra);
         document.addEventListener('load',eventoLetra);
     };
+
 jugar();
 btnJugar.addEventListener('click',resetear);
 });

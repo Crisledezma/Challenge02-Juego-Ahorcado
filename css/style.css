@@ -16,11 +16,9 @@ body{
     transition: 0.3s all ease-in-out;
 }
 .body-juego{
-    background-color: rgb(248, 179, 50);
-}
-.titulo{
     font-family: 'Rye', cursive;
     color: rgb(255, 255, 255);
+    background-color: rgb(248, 179, 50);
 }
 .titulo-rojo{
     font-family: 'Rye', cursive;
@@ -96,6 +94,13 @@ body{
     width: 28px;
     top: 330px;
     left: 278px;
+}
+.mensaje-final{
+    position: absolute;
+    top: 250px;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(255, 255, 255);
 }
 #btnJugar{
     font-family: 'Rye', cursive;
