@@ -142,3 +142,6 @@ ul li{
     list-style: none;
     border: 1px solid rgb(241, 56, 32);
 }
+footer{
+    background-color: rgb(241, 56, 32);
+}
