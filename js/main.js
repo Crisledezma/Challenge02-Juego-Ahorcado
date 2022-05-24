@@ -135,6 +135,6 @@ fetch(`${url}`)
         document.addEventListener('load',eventoLetra);
     };
 
-jugar();
-btnJugar.addEventListener('click',resetear);
+    jugar();
+    btnJugar.addEventListener('click',resetear);
 });
