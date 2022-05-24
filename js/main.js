@@ -78,19 +78,26 @@ fetch(`${url}`)
     };
 
     const agregarParte = function(parte){
-        if(parte=='cabeza'){
-        cabeza.classList.add('mostrar');
-    }else if(parte=='tronco'){
-        tronco.classList.add('mostrar');
-    }else if(parte=='brazo1'){
-        brazo1.classList.add('mostrar');
-    }else if(parte=='brazo2'){
-        brazo2.classList.add('mostrar');
-    }else if(parte=='pierna1'){
-        pierna1.classList.add('mostrar');
-    }else if(parte=='pierna2'){
-        pierna2.classList.add('mostrar');
-    }
+        switch(parte){
+            case 'cabeza':
+                cabeza.classList.add('mostrar');
+                break;
+            case 'tronco':
+                tronco.classList.add('mostrar');
+                break;
+            case 'brazo1':
+                brazo1.classList.add('mostrar');
+                break;
+            case 'brazo2':
+                brazo2.classList.add('mostrar');
+                break;
+            case 'pierna1':
+                pierna1.classList.add('mostrar');
+                break;
+            case 'pierna2':
+                pierna2.classList.add('mostrar');
+                break;
+        }
     }
 
     const ingresarLetra = function(letra){
